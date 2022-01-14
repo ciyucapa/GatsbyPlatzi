@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
 const Gracias = () => (
-    <div>
+    <>
         <SEO title='Compra Exitosa' />
         <Purchase>
             <h2>Compra Exitosa</h2>
@@ -15,7 +15,7 @@ const Gracias = () => (
                 <Button>Volver al Catalogo</Button>
             </Link>
         </Purchase>
-    </div>
+    </>
 );
 
 export default Gracias;

@@ -4,7 +4,7 @@ import SEO from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
 const Cancelacion = () => (
-    <div>
+    <>
         <SEO title='Compra Cancelada' />
         <Purchase>
             <h2>Compra Cancelada</h2>
@@ -15,7 +15,7 @@ const Cancelacion = () => (
                 <Button>Volver al Catalogo</Button>
             </Link>
         </Purchase>
-    </div>
+    </>
 );
 
 export default Cancelacion;

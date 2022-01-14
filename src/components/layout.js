@@ -7,21 +7,22 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import {Content, Footer} from '../styles/components'
 
 import Header from "./header"
 
+import {Content, Footer} from '../styles/components'
+
 const Layout = ({ children }) => (
   <>
-        <Header />
-        <Content>
-          <main>{children}</main>
-          <Footer>
-            con amor por
-            <a href="https://www.platzi.com">Platzi</a>
-          </Footer>
-        </Content>
-      </>
+    <Header />
+      <Content>
+        <main>{children}</main>
+        <Footer>
+          con amor por
+          <a href="https://www.platzi.com">Platzi</a>
+        </Footer>
+      </Content>
+  </>
 )
 
 Layout.propTypes = {
