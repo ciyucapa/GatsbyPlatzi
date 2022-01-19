@@ -1,11 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
 const Gracias = () => (
     <>
-        <SEO title='Compra Exitosa' />
+        <Seo title='Compra Exitosa' />
         <Purchase>
             <h2>Compra Exitosa</h2>
             <p>Espero que disfrutes tu swag, lucelo con orgullo</p>

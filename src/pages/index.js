@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby";
 
 import Jumbo from '../components/Jumbo';
-import { SEO } from "../components";
+import {SEO} from "../components";
 
 export const query = graphql`
 query GET_DESCRIPTION {

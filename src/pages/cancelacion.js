@@ -1,11 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
 const Cancelacion = () => (
     <>
-        <SEO title='Compra Cancelada' />
+        <Seo title='Compra Cancelada' />
         <Purchase>
             <h2>Compra Cancelada</h2>
             <p>¡Lo sentimos,!</p>
