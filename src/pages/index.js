@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 
 import Jumbo from '../components/Jumbo';
 import {SEO} from "../components";
+import {Button} from '../components/styledComponents'
 
 export const query = graphql`
 query GET_DESCRIPTION {
@@ -22,9 +23,7 @@ const IndexPage = ({data}) => (
   <>
     <SEO title="Home" />
     <Jumbo description={data.allSite.edges[0].node.siteMetadata.description}/>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <Button color="white">Comprar</Button>
     <Link to="/gracias/">Go to gracias</Link>
   </>
 )
