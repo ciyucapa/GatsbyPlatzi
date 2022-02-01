@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import {graphql} from "gatsby";
 
-import Jumbo from '../components/Jumbo';
-import {SEO} from "../components";
+import {SEO, Jumbo} from "../components";
 import Products from "../components/Products";
+import priceFormat from '../utils/priceFormat';
 
 export const query = graphql`
 query GET_DESCRIPTION {
@@ -36,15 +36,12 @@ query GET_DESCRIPTION {
 }
 `
 
-const IndexPage = ({data}) => {
-  console.log("data:", data)
-  return (
+const IndexPage = ({data}) =>  (
   <>
     <SEO title="Home" />
     <Jumbo description={data.allSite.edges[0].node.siteMetadata.description}/>
-    <Products edges={data.allStripeSku.edges} />
-    <Link to="/gracias/">Go to gracias</Link>
+    <Products edges={data.allStripeSku.edges} priceFormat={priceFormat} />
   </>
-)}
+)
 
 export default IndexPage;
