@@ -1,10 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useContext} from "react"
 
+import {CartContext} from '../context/context'
 import {MenuItem, StyledHeader} from "../styles/components"
 
-const Header = () => (
+const Header = () => {
+  const {cart} = useContext(CartContext);
+  return (
   <StyledHeader>
     <Link to="/" >
       <img 
@@ -27,13 +30,14 @@ const Header = () => (
                 src="https://i.postimg.cc/L6wpMxLt/cart.png" 
                 alt="cart logo"
               />
+              {cart.length}
             </span>
           </Link>
         </MenuItem>
       </ul>
     </nav>
   </StyledHeader>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
