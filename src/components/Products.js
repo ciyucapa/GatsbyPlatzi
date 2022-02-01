@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import PropTypes from "prop-types";
+
 import {StyledProducts} from '../styles/components'
 
 const Products = (props) => (
@@ -18,7 +20,16 @@ const Products = (props) => (
             )}
         </section>
     </StyledProducts>
-)
-;
+);
+
+Products.defaultProps = {
+    priceFormat: () => {},
+    edges: [],
+}
+  
+Products.propTypes = {
+    priceFormat: PropTypes.func,
+    edges: PropTypes.arrayOf(PropTypes.object),
+}
 
 export default Products;

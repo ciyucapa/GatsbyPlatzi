@@ -1,11 +1,8 @@
 import React from "react";
+import {ProductDetail} from '../components'
 
-const Product = () => {
-    return (
-        <div>
-            Producto
-        </div>
-    )
+const Product = ({pageContext}) => {
+    return <ProductDetail {...pageContext} />
 };
 
 export default Product;

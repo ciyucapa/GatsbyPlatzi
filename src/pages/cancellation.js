@@ -1,9 +1,10 @@
-import { Link } from 'gatsby';
+import {Link} from 'gatsby';
 import React from 'react';
+
 import Seo from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
-const Cancelacion = () => (
+const cancellation = () => (
     <>
         <Seo title='Compra Cancelada' />
         <Purchase>
@@ -18,4 +19,4 @@ const Cancelacion = () => (
     </>
 );
 
-export default Cancelacion;
+export default cancellation;

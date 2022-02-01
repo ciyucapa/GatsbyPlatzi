@@ -35,7 +35,6 @@ query GET_DESCRIPTION {
   }
 }
 `
-
 const IndexPage = ({data}) =>  (
   <>
     <SEO title="Home" />

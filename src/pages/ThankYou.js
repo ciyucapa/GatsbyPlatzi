@@ -3,7 +3,7 @@ import React from 'react';
 import Seo from '../components/seo';
 import {Purchase, Button} from '../styles/components';
 
-const Gracias = () => (
+const ThankYou = () => (
     <>
         <Seo title='Compra Exitosa' />
         <Purchase>
@@ -18,4 +18,4 @@ const Gracias = () => (
     </>
 );
 
-export default Gracias;
+export default ThankYou;
