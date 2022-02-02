@@ -1,10 +1,13 @@
 import React from "react";
-import Cart from '../components/Cart'
+import Carts from '../components/Carts'
+import useCart from "../hooks/useCart";
+import priceFormat from "../utils/priceFormat";
 
-const cart = () => {
+const Cart = () => {
+    const hookCart = useCart();
     return(
-        <Cart />
+        <Carts {...hookCart} priceFormat={priceFormat} />
     )
 };
 
-export default cart;
+export default Cart;

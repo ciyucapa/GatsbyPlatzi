@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, {useContext} from "react"
 
-import {CartContext} from '../context/context'
 import {MenuItem, StyledHeader} from "../styles/components"
+import {CartContext} from '../context/context'
+
 
 const Header = () => {
   const {cart} = useContext(CartContext);
@@ -38,13 +38,5 @@ const Header = () => {
     </nav>
   </StyledHeader>
 )}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -1,28 +1,29 @@
-import React, {useState, useContext} from 'react';
+import React from 'react';
 
 import priceFormat from '../utils/priceFormat';
-import {CartContext} from '../context/context'
-
+import Seo from './seo'
+import Starts from './Starts';
+import useStars from '../hooks/useStars';
+import useProductDetail from '../hooks/useProductDetail';
 import {
     Tag, 
     SizeButton, 
     Button, 
-    //QtyButton, 
     QtySelect,
     SizeSelect, 
     StyledProductDetail
-} from '../styles/components'
-import Seo from './seo'
-import Starts from './Starts';
+} from '../styles/components';
 
 const ProductDetail = ({price, image, id, product: {name, metadata}}) => {
-    const [size, setSize] = useState(2);
-    const [qty, setQty] = useState(1); 
-    const {addToCart} = useContext(CartContext);
-
-    const handleSubmit = () => {
-        addToCart({price, image, name, id, metadata, qty})
-    }
+    const hookStart = useStars();
+    const {
+        qty,
+        size,
+        increasequantity, 
+        decreaseQuantity, 
+        onSize, 
+        handleSubmit
+    } = useProductDetail(price, image, id, name, metadata);
 
     return (
         <StyledProductDetail>
@@ -32,23 +33,23 @@ const ProductDetail = ({price, image, id, product: {name, metadata}}) => {
                 <Tag>Popular</Tag>
                 <h2>{name}</h2>
                 <b>USD {priceFormat(price)}</b>
-                <Starts/>
+                <Starts {...hookStart} />
                 {metadata?.color && (<h3>Color: {metadata?.color}</h3>)}
                 <small>{metadata?.description}</small>
                 {metadata?.wear && (
                     <SizeSelect selected={size}>
-                        <SizeButton onClick={() => setSize(1)}>XS</SizeButton>
-                        <SizeButton onClick={() => setSize(2)}>S</SizeButton>
-                        <SizeButton onClick={() => setSize(3)}>M</SizeButton>
-                        <SizeButton onClick={() => setSize(4)}>L</SizeButton>
-                        <SizeButton onClick={() => setSize(5)}>XL</SizeButton>
+                        <SizeButton onClick={() => onSize(1)}>XS</SizeButton>
+                        <SizeButton onClick={() => onSize(2)}>S</SizeButton>
+                        <SizeButton onClick={() => onSize(3)}>M</SizeButton>
+                        <SizeButton onClick={() => onSize(4)}>L</SizeButton>
+                        <SizeButton onClick={() => onSize(5)}>XL</SizeButton>
                     </SizeSelect>
                 )}
                 <p>Cantidad: </p>
                 <QtySelect>
-                    <button onClick={() => (qty > 1 ? setQty(qty - 1) : null)}>-</button>
+                    <button onClick={decreaseQuantity}>-</button>
                     <input type="text" disabled value={qty}/>
-                    <button onClick={() => setQty(qty + 1) }>+</button>
+                    <button onClick={increasequantity}>+</button>
                 </QtySelect>
                 <Button onClick={handleSubmit}>Agregar al carrito</Button>
             </div>

@@ -1,18 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
+import PropTypes from "prop-types"
 
 import {SelectStars} from '../styles/components'
 
-const Starts = () => {
-    const [stars, setStars] = useState(5)
-    return (
-        <SelectStars selected={stars}>
-            <span role="button" tabIndex="0" onClick={() => setStars(1)} onKeyDown={() => setStars(1)}>★</span>
-            <span role="button" tabIndex="0" onClick={() => setStars(2)} onKeyDown={() => setStars(2)}>★</span>
-            <span role="button" tabIndex="0" onClick={() => setStars(3)} onKeyDown={() => setStars(3)}>★</span>
-            <span role="button" tabIndex="0" onClick={() => setStars(4)} onKeyDown={() => setStars(4)}>★</span>
-            <span role="button" tabIndex="0" onClick={() => setStars(5)} onKeyDown={() => setStars(5)}>★</span>
-        </SelectStars>
-    )
+const Starts = (props) =>(
+    <SelectStars selected={props.stars}>
+        <span role="button" tabIndex="0" onClick={() => props.onStars(1)} onKeyDown={() => props.onStars(1)}>★</span>
+        <span role="button" tabIndex="0" onClick={() => props.onStars(2)} onKeyDown={() => props.onStars(2)}>★</span>
+        <span role="button" tabIndex="0" onClick={() => props.onStars(3)} onKeyDown={() => props.onStars(3)}>★</span>
+        <span role="button" tabIndex="0" onClick={() => props.onStars(4)} onKeyDown={() => props.onStars(4)}>★</span>
+        <span role="button" tabIndex="0" onClick={() => props.onStars(5)} onKeyDown={() => props.onStars(5)}>★</span>
+    </SelectStars>
+);
+
+Starts.propTypes = {
+    stars: PropTypes.number,
+    onStars: PropTypes.func,
+}
+  
+Starts.defaultProps = {
+    stars: 5,
+    onStars: () => 5,
 }
 
 export default Starts
