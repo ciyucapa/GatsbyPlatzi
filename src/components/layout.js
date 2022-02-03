@@ -7,13 +7,13 @@ import {Content, Footer} from '../styles/components'
 const Layout = (props) => (
   <>
     <Header />
-      <Content>
-        <main>{props.children}</main>
-        <Footer>
-          con amor por
-          <a href="https://www.platzi.com">Platzi</a>
-        </Footer>
-      </Content>
+    <Content>
+      <main>{props.children}</main>
+      <Footer>
+        con amor por
+        <a href="https://www.platzi.com">Platzi</a>
+      </Footer>
+    </Content>
   </>
 )
 

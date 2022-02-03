@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carts renders correctly 1`] = `
+<div
+  className="sc-ifAKCX kThCum"
+>
+  <h2>
+    Carrito de compras
+  </h2>
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Product
+        </th>
+        <th>
+          Precio
+        </th>
+        <th>
+          Cantidad
+        </th>
+        <th>
+          Total
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="http://test.com/image"
+          />
+        </td>
+        <td>
+          USD 
+          3500
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          USD 
+          3500
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav>
+    <div>
+      <h3>
+        Subtotal:
+      </h3>
+      <small>
+        USD 
+        3500
+      </small>
+    </div>
+    <div>
+      <a
+        href="/"
+      >
+        <button
+          className="sc-gqjmRU kQlgie"
+          type="outline"
+        >
+          Volver
+        </button>
+      </a>
+      <button
+        className="sc-gqjmRU kQlgie"
+        disabled={false}
+        onClick={[Function]}
+        type="outline"
+      >
+        Comprar
+      </button>
+    </div>
+  </nav>
+</div>
+`;

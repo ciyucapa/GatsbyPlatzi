@@ -24,11 +24,16 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-test-renderer": "^16.8.6",
     "react-typography": "^0.16.20",
     "styled-components": "^4.4.1",
     "typography": "^0.16.21"
   },
   "devDependencies": {
+    "babel-jest": "^27.4.6",
+    "babel-preset-gatsby": "^2.6.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.7",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -41,6 +46,6 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "jest"
   }
 }

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products renders correctly 1`] = `
+<div
+  className="sc-htpNat chkFFt"
+>
+  <h2>
+    Productos
+  </h2>
+  <section>
+    <article>
+      <img
+        alt="test"
+        src="https://platzi.com/images"
+      />
+      <p>
+        test
+      </p>
+      <small>
+        3500
+      </small>
+      <a
+        href="/asas"
+      >
+        Comprar ahora 
+        <span>
+           --- 
+        </span>
+      </a>
+    </article>
+  </section>
+</div>
+`;

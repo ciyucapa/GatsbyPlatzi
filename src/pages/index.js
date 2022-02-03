@@ -4,6 +4,7 @@ import {graphql} from "gatsby";
 import {SEO, Jumbo} from "../components";
 import Products from "../components/Products";
 import priceFormat from '../utils/priceFormat';
+import ImageComponente from '../components/image';
 
 export const query = graphql`
 query GET_DESCRIPTION {
@@ -38,7 +39,9 @@ query GET_DESCRIPTION {
 const IndexPage = ({data}) =>  (
   <>
     <SEO title="Home" />
-    <Jumbo description={data.allSite.edges[0].node.siteMetadata.description}/>
+    <Jumbo description={data.allSite.edges[0].node.siteMetadata.description}>
+      <ImageComponente name="icon" />
+    </Jumbo>
     <Products edges={data.allStripeSku.edges} priceFormat={priceFormat} />
   </>
 )

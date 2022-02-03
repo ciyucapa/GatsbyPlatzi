@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageComponente renders correctly 1`] = `
+<div
+  className="sc-bwzfXH kkAmTB"
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+      }
+    }
+  >
+    <h2>
+      !Consigue el mejor swag exclusivo de Platzi¡
+    </h2>
+    <small>
+      El mejor sitio
+    </small>
+  </div>
+  <div>
+    Test
+  </div>
+</div>
+`;
