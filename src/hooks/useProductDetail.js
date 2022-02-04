@@ -1,13 +1,13 @@
 import {useState, useContext} from 'react';
 import {CartContext} from '../context/context';
 
-const useProductDetail = (price, image, id, name, metadata) => {
+const useProductDetail = (price, image, id, product) => {
     const [size, setSize] = useState(2);
     const [qty, setQty] = useState(1); 
     const {addToCart} = useContext(CartContext);
 
     const handleSubmit = () => {
-        addToCart({price, image, name, id, metadata, qty})
+        addToCart({price, image, id, product, qty})
     };
 
     const onSize = (number) => {

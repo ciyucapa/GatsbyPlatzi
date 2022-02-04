@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Starts renders correctly 1`] = `
+<div
+  className="sc-bxivhb kwbWrb"
+>
+  <img />
+  <div>
+    <span
+      className="sc-gzVnrw fGfoQr"
+    >
+      Popular
+    </span>
+    <h2 />
+    <b>
+      USD 
+      $NaN
+    </b>
+    <div
+      className="sc-VigVT bLIVrL"
+      selected={5}
+    >
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        ★
+      </span>
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        ★
+      </span>
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        ★
+      </span>
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        ★
+      </span>
+      <span
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        ★
+      </span>
+    </div>
+    <small />
+    <p>
+      Cantidad: 
+    </p>
+    <div
+      className="sc-iwsKbI dRnGye"
+    >
+      <button
+        onClick={[Function]}
+      >
+        -
+      </button>
+      <input
+        disabled={true}
+        type="text"
+        value={1}
+      />
+      <button
+        onClick={[Function]}
+      >
+        +
+      </button>
+    </div>
+    <button
+      className="sc-gqjmRU dvFDel"
+      onClick={[Function]}
+    >
+      Agregar al carrito
+    </button>
+  </div>
+</div>
+`;

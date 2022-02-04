@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="sc-bdVaJa kdaubh"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="logo swag"
+      src="https://i.postimg.cc/6q3pg48v/Logo.png"
+    />
+  </a>
+  <nav>
+    <ul>
+      <li
+        className="sc-EHOje cVIwKk"
+      >
+        <a
+          href="/"
+        >
+          Productos
+        </a>
+      </li>
+      <li
+        className="sc-EHOje cVIwKk"
+      >
+        <a
+          href="http://www.platzi.com"
+        >
+          Platzi
+        </a>
+      </li>
+      <li
+        className="sc-EHOje hQmllw"
+      >
+        <a
+          href="/cart"
+        >
+          <span>
+            <img
+              alt="cart logo"
+              src="https://i.postimg.cc/L6wpMxLt/cart.png"
+            />
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

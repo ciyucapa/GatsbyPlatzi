@@ -14,7 +14,7 @@ import {
     StyledProductDetail
 } from '../styles/components';
 
-const ProductDetail = ({price, image, id, product: {name, metadata}}) => {
+const ProductDetail = ({price, image, id, product}) => {
     const hookStart = useStars();
     const {
         qty,
@@ -23,20 +23,20 @@ const ProductDetail = ({price, image, id, product: {name, metadata}}) => {
         decreaseQuantity, 
         onSize, 
         handleSubmit
-    } = useProductDetail(price, image, id, name, metadata);
+    } = useProductDetail(price, image, id, product);
 
     return (
         <StyledProductDetail>
-            <Seo title={name}/>
-            <img src={image} alt={name}/>
+            <Seo title={product?.name}/>
+            <img src={image} alt={product?.name}/>
             <div>
                 <Tag>Popular</Tag>
-                <h2>{name}</h2>
+                <h2>{product?.name}</h2>
                 <b>USD {priceFormat(price)}</b>
                 <Starts {...hookStart} />
-                {metadata?.color && (<h3>Color: {metadata?.color}</h3>)}
-                <small>{metadata?.description}</small>
-                {metadata?.wear && (
+                {product?.metadata?.color && (<h3>Color: {product?.metadata?.color}</h3>)}
+                <small>{product?.metadata?.description}</small>
+                {product?.metadata?.wear && (
                     <SizeSelect selected={size}>
                         <SizeButton onClick={() => onSize(1)}>XS</SizeButton>
                         <SizeButton onClick={() => onSize(2)}>S</SizeButton>

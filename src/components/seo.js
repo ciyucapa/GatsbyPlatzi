@@ -4,7 +4,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const  data  = useStaticQuery(
     graphql`
       query {
         site {
@@ -17,8 +17,8 @@ function Seo({ description, lang, meta, title }) {
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
+      console.log("seo", data)
+  const metaDescription = description || data?.site?.siteMetadata?.description
 
   return (
     <Helmet
@@ -26,7 +26,7 @@ function Seo({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${data?.site?.siteMetadata?.title}`}
       meta={[
         {
           name: `description`,
@@ -50,7 +50,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: data?.site?.siteMetadata?.author,
         },
         {
           name: `twitter:title`,

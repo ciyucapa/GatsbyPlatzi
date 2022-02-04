@@ -30,7 +30,7 @@ const Header = () => {
                 src="https://i.postimg.cc/L6wpMxLt/cart.png" 
                 alt="cart logo"
               />
-              {cart.length}
+              {cart?.length}
             </span>
           </Link>
         </MenuItem>
@@ -39,4 +39,4 @@ const Header = () => {
   </StyledHeader>
 )}
 
-export default Header
+export default Header;
